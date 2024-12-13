@@ -73,6 +73,13 @@ const wrapHtml = (body: string) => `<html>
       background: #EB4C4F;
       color: white;
     }
+    
+    .header {
+      position: sticky;
+      top: 0;
+      background: #F9CB85;
+    }
+    
     * {
       font-family: monospace;
     }
@@ -91,7 +98,7 @@ const processProjects = () => {
 
   fillAllDependencies();
 
-  const tableHead = `<tr><th></th>${ITEMS.map(
+  const tableHead = `<tr class="header"><th></th>${ITEMS.map(
     (item) => `<th>${item.projectName}</th>`
   ).join("")}</tr>`;
   const tableRows = ALL_DEPENDENCIES.map((name) => {
