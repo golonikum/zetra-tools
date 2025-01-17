@@ -6,7 +6,9 @@
   "scripts": {
     "projects-packages": "ts-node src/projects-packages.ts",
     "replace-core-ui": "npx tsx src/mf/replace-core-ui",
-    "convert-paths": "npx tsx src/mf/convert-paths"
+    "convert-paths": "npx tsx src/mf/convert-paths",
+    "prepare-workspace": "npx tsx src/workspace/prepare-workspace",
+    "commit-workspace": "npx tsx src/workspace/commit-workspace"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "colors": "1.4.0",
     "commander": "12.1.0",
     "get-all-files": "5.0.0",
+    "open": "10.1.0",
     "replace-in-file": "8.3.0",
     "singleline": "2.0.2",
     "ts-node": "10.9.2",

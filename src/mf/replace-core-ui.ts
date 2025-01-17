@@ -4,6 +4,7 @@ import { replaceInFileSync } from "replace-in-file";
 import { getAllFilesSync } from "get-all-files";
 import colors from "colors/safe";
 import singleline from "singleline";
+import { ZETRA_ROOT_PATH } from "../constants";
 
 import { MAP } from "./map";
 import { TOP_LEVEL_COMPONENTS } from "./items";
@@ -40,7 +41,7 @@ const componentsMap: Record<string, string> = Object.entries(MAP).reduce(
 );
 
 const files = getAllFilesSync(
-  path.resolve(__dirname, "../../..", `${programOptions.projectName}/src`)
+  path.resolve(ZETRA_ROOT_PATH, `${programOptions.projectName}/src`)
 ).toArray();
 
 const options = {
