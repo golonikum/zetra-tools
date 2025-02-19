@@ -1,29 +1,25 @@
 import fs from "fs";
 import path from "path";
-import { ZETRA_ROOT_PATH } from "./constants";
+import { ZETRA_ROOT_PATH } from "../constants";
 
 const PROJECTS = {
   "admin-ui": path.resolve(ZETRA_ROOT_PATH, "admin-ui"),
   "core-api": path.resolve(ZETRA_ROOT_PATH, "core-api"),
   "core-ui": path.resolve(ZETRA_ROOT_PATH, "core-ui"),
   "global-config": path.resolve(
-    __dirname,
-    "../..",
+    ZETRA_ROOT_PATH,
     "developer-kit/packages/global-config"
   ),
   "linter-config": path.resolve(
-    __dirname,
-    "../..",
+    ZETRA_ROOT_PATH,
     "developer-kit/packages/linter-config"
   ),
   "test-utils": path.resolve(
-    __dirname,
-    "../..",
+    ZETRA_ROOT_PATH,
     "developer-kit/packages/test-utils"
   ),
   "webpack-config": path.resolve(
-    __dirname,
-    "../..",
+    ZETRA_ROOT_PATH,
     "developer-kit/packages/webpack-config"
   ),
   "geo-ui": path.resolve(ZETRA_ROOT_PATH, "geo-ui"),
@@ -120,7 +116,7 @@ const processProjects = () => {
   }).join("");
 
   fs.writeFileSync(
-    path.resolve(__dirname, "../build", "projects-packages.html"),
+    path.resolve(__dirname, "../../build", "projects-packages.html"),
     wrapHtml(`${tableHead}${tableRows}`),
     {
       encoding: "utf8",

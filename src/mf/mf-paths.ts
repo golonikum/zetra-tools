@@ -130,7 +130,7 @@ export const MF_PATHS = {
   "./TableSortHeader": "./src/components/organisms/TableSortHeader",
   "./Toaster": "./src/components/organisms/Toaster",
   "./Tooltip": "./src/components/organisms/Tooltip",
-  "./videoPlayer": "./src/components/organisms/videoPlayer",
+  "./videoPlayers": "./src/components/organisms/videoPlayers",
   "./WeatherForecastWidget": "./src/components/organisms/WeatherForecastWidget",
   "./WeatherWidget": "./src/components/organisms/WeatherWidget",
   "./WSPushToaster": "./src/components/organisms/WSPushToaster",

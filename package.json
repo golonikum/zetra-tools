@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "projects-packages": "ts-node src/projects-packages.ts",
+    "list-projects-packages": "ts-node src/projects-packages/list-projects-packages.ts",
     "replace-core-ui": "npx tsx src/mf/replace-core-ui",
     "convert-paths": "npx tsx src/mf/convert-paths",
     "prepare-workspace": "npx tsx src/workspace/prepare-workspace",

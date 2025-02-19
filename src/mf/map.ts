@@ -42,7 +42,7 @@ export const MAP: Record<string, string[]> = {
     "SelectDestinationsTypeEnum",
     "SelectNotificationChannel",
   ],
-  common: ["OptionType", "OptionExtendedType"],
+  common: ["OptionType", "OptionExtendedType", "SortTypes"],
   router: ["initiRouterSaga"],
   utils: [
     "getPathWithoutBasename",
@@ -386,7 +386,11 @@ export const MAP: Record<string, string[]> = {
     "IncidentViewListCardItemType",
     "IncidentViewListItemType",
   ],
-  scenaries: ["ScenarioStepItem", "ScenarioTabAsideInfo"],
+  scenaries: [
+    "ScenarioStepItem",
+    "ScenarioStepsTreeView",
+    "ScenarioTabAsideInfo",
+  ],
   signals: [
     "SignalsListItemPropsType",
     "SignalBpPlansWidget",
@@ -410,10 +414,16 @@ export const MAP: Record<string, string[]> = {
     "ListPageWithCardLayoutFilter",
   ],
   RootLayout: ["RootLayout"],
-  videoPlayer: [
+  videoPlayers: [
     "VideoPlayerActionBar",
     "VideoPlayerControlPanel",
-    "InOneDashPlayer",
-    "InOnePlayer",
+    "DashVideoPlayer",
+    "StreamVideoPlayer",
+    "VideoPlayer",
+    "WebRtcpPlayer",
+  ],
+  IncidentShortInfoEditDrawer: [
+    "IncidentShortInfoEditDrawer",
+    "IncidentShortInfoEditFormValuesType",
   ],
 };
