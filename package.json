@@ -8,7 +8,8 @@
     "replace-core-ui": "npx tsx src/mf/replace-core-ui",
     "convert-paths": "npx tsx src/mf/convert-paths",
     "prepare-workspace": "npx tsx src/workspace/prepare-workspace",
-    "commit-workspace": "npx tsx src/workspace/commit-workspace"
+    "commit-workspace": "npx tsx src/workspace/commit-workspace",
+    "run-mf-remotes": "npx tsx src/run-mf/run-mf-remotes"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +23,10 @@
     "replace-in-file": "8.3.0",
     "singleline": "2.0.2",
     "ts-node": "10.9.2",
-    "typescript": "5.7.2",
-    "tsx": "4.19.2"
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }

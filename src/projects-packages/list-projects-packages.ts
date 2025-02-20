@@ -1,32 +1,32 @@
 import fs from "fs";
 import path from "path";
-import { ZETRA_ROOT_PATH } from "../constants";
+import { PROJECTS_ROOT_PATH } from "../constants";
 
 const PROJECTS = {
-  "admin-ui": path.resolve(ZETRA_ROOT_PATH, "admin-ui"),
-  "core-api": path.resolve(ZETRA_ROOT_PATH, "core-api"),
-  "core-ui": path.resolve(ZETRA_ROOT_PATH, "core-ui"),
+  "admin-ui": path.resolve(PROJECTS_ROOT_PATH, "admin-ui"),
+  "core-api": path.resolve(PROJECTS_ROOT_PATH, "core-api"),
+  "core-ui": path.resolve(PROJECTS_ROOT_PATH, "core-ui"),
   "global-config": path.resolve(
-    ZETRA_ROOT_PATH,
+    PROJECTS_ROOT_PATH,
     "developer-kit/packages/global-config"
   ),
   "linter-config": path.resolve(
-    ZETRA_ROOT_PATH,
+    PROJECTS_ROOT_PATH,
     "developer-kit/packages/linter-config"
   ),
   "test-utils": path.resolve(
-    ZETRA_ROOT_PATH,
+    PROJECTS_ROOT_PATH,
     "developer-kit/packages/test-utils"
   ),
   "webpack-config": path.resolve(
-    ZETRA_ROOT_PATH,
+    PROJECTS_ROOT_PATH,
     "developer-kit/packages/webpack-config"
   ),
-  "geo-ui": path.resolve(ZETRA_ROOT_PATH, "geo-ui"),
-  "manager-ui": path.resolve(ZETRA_ROOT_PATH, "manager-ui"),
-  "simulator-ui": path.resolve(ZETRA_ROOT_PATH, "simulator-ui"),
-  "vesp-ui": path.resolve(ZETRA_ROOT_PATH, "vesp-ui"),
-  "worker-ui": path.resolve(ZETRA_ROOT_PATH, "worker-ui"),
+  "geo-ui": path.resolve(PROJECTS_ROOT_PATH, "geo-ui"),
+  "manager-ui": path.resolve(PROJECTS_ROOT_PATH, "manager-ui"),
+  "simulator-ui": path.resolve(PROJECTS_ROOT_PATH, "simulator-ui"),
+  "vesp-ui": path.resolve(PROJECTS_ROOT_PATH, "vesp-ui"),
+  "worker-ui": path.resolve(PROJECTS_ROOT_PATH, "worker-ui"),
 };
 
 type ItemType = {
