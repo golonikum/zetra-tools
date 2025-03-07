@@ -8,13 +8,13 @@ const exec = util.promisify(execBase);
 
 export async function execCommand(dir: string, command: string) {
   const cwd = path.resolve(PROJECTS_ROOT_PATH, dir);
-  console.log(colors.yellow(`${cwd} > ${command}`));
+  console.log(`${cwd} > ${command}`);
   let output = "";
 
   try {
     const { stdout, stderr } = await exec(command, { cwd });
     console.log(colors.green(stdout));
-    console.log(colors.blue(stderr));
+    console.log(colors.yellow(stderr));
     output = `${stdout}\n${stderr}`;
   } catch (e) {
     console.log(
