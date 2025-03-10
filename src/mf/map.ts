@@ -328,9 +328,10 @@ export const MAP: Record<string, string[]> = {
     "DeviceMeasurementsFilters",
     "DeviceStatusHistoryList",
     "DeviceListItem",
+    "DeviceGroupListItem",
     "DevicesListFilter",
   ],
-  "/devices/types": ["DevicesListFilterFormDataType"],
+  "/devices/types": ["DevicesListFilterFormDataType", "DeviceGroupType"],
   "/devices/utils": [
     "getDeviceAddress",
     "getDevicesListFilterStatusOptionsRecord",
