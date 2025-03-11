@@ -111,6 +111,7 @@ export const MAP: Record<string, string[]> = {
     "useDraggableScroll",
     "useIsEllipsis",
     "useWindowResize",
+    "useRegisterSwAndSubscribePush",
   ],
   layers: [
     "LayersListGroupItemPropsType",
