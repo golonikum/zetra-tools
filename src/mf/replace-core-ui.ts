@@ -66,7 +66,7 @@ const options = {
       } else if (TOP_LEVEL_COMPONENTS.includes(cur)) {
         str = `import { ${cur} } from 'core_ui/${cur}';`;
       } else {
-        alertItems.push(str);
+        alertItems.push(cur);
       }
 
       return [...res, str];

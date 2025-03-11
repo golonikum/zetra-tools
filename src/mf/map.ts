@@ -186,7 +186,6 @@ export const MAP: Record<string, string[]> = {
     "SortFilterProps",
     "SortFilterStyleProps",
     "SortFilterViewType",
-    "SortTypes",
   ],
   SelectedFiltersBlock: [
     "QuickFilterConfigType",
@@ -428,4 +427,12 @@ export const MAP: Record<string, string[]> = {
     "addressSearchValidationSchema",
     "addressSearchValidationSchemaRequired",
   ],
+  OptionStepCard: [
+    "OptionStepCard",
+    "OptionStepCardPropsType",
+    "OptionStepDistrict",
+    "OptionStepIncidentType",
+    "OptionStepThreat",
+  ],
+  OptionStepList: ["OptionStepList", "DEFAULT_OPTION_STEPS"],
 };
