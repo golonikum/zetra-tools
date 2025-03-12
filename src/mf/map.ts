@@ -421,7 +421,7 @@ export const MAP: Record<string, string[]> = {
   ],
   "form/FileUploadField": ["FileUploadField"],
   "form/DateRangeFieldsGroup": ["DateRangeFieldsGroup"],
-  AddressSearchFieldsGroup: [
+  "form/AddressSearchFieldsGroup": [
     "AddressSearchFieldsGroup",
     "CoordinatesField",
     "coordinateValidationSchema",

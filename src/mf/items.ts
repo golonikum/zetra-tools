@@ -115,4 +115,5 @@ export const TOP_LEVEL_COMPONENTS = [
   "WeatherForecastWidget",
   "WeatherWidget",
   "WSPushToaster",
+  "ExportControl",
 ];
