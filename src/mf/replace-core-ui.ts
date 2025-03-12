@@ -6,8 +6,7 @@ import colors from "colors/safe";
 import singleline from "singleline";
 import { PROJECTS_ROOT_PATH } from "../constants";
 
-import { MAP } from "./map";
-import { TOP_LEVEL_COMPONENTS } from "./items";
+import { COMPONENTS_MAP, TOP_LEVEL_COMPONENTS } from "./constants";
 
 const program = new Command();
 
@@ -32,13 +31,12 @@ program.parse(process.argv);
 
 const programOptions = program.opts();
 
-const componentsMap: Record<string, string> = Object.entries(MAP).reduce(
-  (res, [key, value]) => {
-    const item = value.reduce((r, c) => ({ ...r, [c]: key }), {});
-    return { ...res, ...item };
-  },
-  {}
-);
+const componentsMap: Record<string, string> = Object.entries(
+  COMPONENTS_MAP
+).reduce((res, [key, value]) => {
+  const item = value.reduce((r, c) => ({ ...r, [c]: key }), {});
+  return { ...res, ...item };
+}, {});
 
 const files = getAllFilesSync(
   path.resolve(PROJECTS_ROOT_PATH, `${programOptions.projectName}/src`)
