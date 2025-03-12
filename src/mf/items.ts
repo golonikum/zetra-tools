@@ -116,4 +116,5 @@ export const TOP_LEVEL_COMPONENTS = [
   "WeatherWidget",
   "WSPushToaster",
   "ExportControl",
+  "IncidentShortInfoDrawer",
 ];

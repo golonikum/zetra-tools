@@ -181,6 +181,7 @@ export const MAP: Record<string, string[]> = {
   Label: ["Label", "LabelColorEnum", "LabelProps"],
   SortFilter: [
     "SortFilter",
+    "SortFilterItem",
     "SortFilterIconsTypes",
     "SortFilterItemProps",
     "SortFilterItemType",
@@ -212,6 +213,7 @@ export const MAP: Record<string, string[]> = {
     "TreeViewItemType",
     "TreeViewProps",
     "TreeViewType",
+    "filterTreeViewItemTypesByName",
   ],
   SelectNotificationDestinationsList: [
     "SelectNotificationDestinationsList",
@@ -252,6 +254,12 @@ export const MAP: Record<string, string[]> = {
     "TestItemType",
   ],
   charts: [
+    "AreaChart",
+    "AreaChartItemType",
+    "LineChart",
+    "LineChartItemType",
+    "LineChartLabelsType",
+    "LineChartItemsType",
     "DEFAULT_GANTT_CHART_PERIOD_ITEM_WIDTH_SETTINGS",
     "EventItemKindType",
     "EventItemType",
@@ -331,8 +339,8 @@ export const MAP: Record<string, string[]> = {
     "DeviceGroupListItem",
     "DevicesListFilter",
   ],
-  "/devices/types": ["DevicesListFilterFormDataType", "DeviceGroupType"],
-  "/devices/utils": [
+  "devices/types": ["DevicesListFilterFormDataType", "DeviceGroupType"],
+  "devices/utils": [
     "getDeviceAddress",
     "getDevicesListFilterStatusOptionsRecord",
     "devicesListFilterStatusOptions",
@@ -354,7 +362,6 @@ export const MAP: Record<string, string[]> = {
     "IncidentRespondersStatus",
     "IncidentSecondaryThreatsList",
     "IncidentSecondaryThreatsTree",
-    "IncidentShortInfoDrawer",
     "IncidentsListCard",
     "IncidentsListCardMobile",
     "IncidentsListItem",
