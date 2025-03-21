@@ -50,8 +50,11 @@ async function tryCommitProject(dir: string) {
 }
 
 async function main() {
+  await tryCommitProject("developer-kit");
   await tryCommitProject("core-api");
   await tryCommitProject("core-ui");
+  await tryCommitProject("forces-ui");
+  await tryCommitProject("simulator-ui");
   await tryCommitProject("manager-ui");
   await tryCommitProject("vesp-ui");
   await tryCommitProject("admin-ui");
