@@ -26,16 +26,13 @@ program.parse(process.argv);
 
 const programOptions = program.opts();
 
-async function prepareProject(
-  dir: string,
-  buildCommand = "yarn build:webpack"
-) {
+async function prepareProject(dir: string, buildCommand?: string) {
   await execCommand(dir, "git checkout develop");
   await execCommand(dir, "git pull origin develop");
   await execCommand(dir, `git checkout -b ${programOptions.branchName}`);
   await execCommand(dir, "yarn");
 
-  if (programOptions.projectName !== dir) {
+  if (buildCommand) {
     await execCommand(dir, buildCommand);
   }
 
@@ -43,8 +40,12 @@ async function prepareProject(
 }
 
 async function main() {
-  await prepareProject("core-api");
+  await prepareProject("developer-kit", "yarn build:all");
+  await prepareProject("core-api", "yarn build:webpack");
   await prepareProject("core-ui");
+  await prepareProject("simulator-ui");
+  await prepareProject("forces-ui");
+
   await prepareProject(programOptions.projectName);
 }
 
