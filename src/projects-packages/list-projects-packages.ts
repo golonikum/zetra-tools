@@ -25,8 +25,10 @@ const PROJECTS = {
   "geo-ui": path.resolve(PROJECTS_ROOT_PATH, "geo-ui"),
   "manager-ui": path.resolve(PROJECTS_ROOT_PATH, "manager-ui"),
   "simulator-ui": path.resolve(PROJECTS_ROOT_PATH, "simulator-ui"),
+  "forces-ui": path.resolve(PROJECTS_ROOT_PATH, "forces-ui"),
   "vesp-ui": path.resolve(PROJECTS_ROOT_PATH, "vesp-ui"),
   "worker-ui": path.resolve(PROJECTS_ROOT_PATH, "worker-ui"),
+  "inventory-ui": path.resolve(PROJECTS_ROOT_PATH, "inventory-ui"),
 };
 
 type ItemType = {

@@ -10,6 +10,7 @@
     "prepare-workspace": "npx tsx src/workspace/prepare-workspace",
     "commit-workspace": "npx tsx src/workspace/commit-workspace",
     "update-all-projects": "npx tsx src/workspace/update-all-projects",
+    "clone-all-projects": "npx tsx src/workspace/clone-all-projects",
     "run-mf-remotes": "npx tsx src/run-mf/run-mf-remotes"
   },
   "author": "",

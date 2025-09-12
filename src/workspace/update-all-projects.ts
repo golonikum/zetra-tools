@@ -30,13 +30,14 @@ async function updateProject(dir: string, buildCommand?: string) {
 async function main() {
   await updateProject("developer-kit", "yarn build:all");
   await updateProject("core-api", "yarn build:webpack");
-  await updateProject("core-ui", "yarn build");
-  await updateProject("simulator-ui", "yarn build");
-  await updateProject("forces-ui", "yarn build");
+  await updateProject("core-ui");
+  await updateProject("simulator-ui");
+  await updateProject("forces-ui");
   await updateProject("geo-ui");
   await updateProject("vesp-ui");
   await updateProject("worker-ui");
   await updateProject("admin-ui");
+  await updateProject("inventory-ui");
   await updateProject("manager-ui");
 }
 

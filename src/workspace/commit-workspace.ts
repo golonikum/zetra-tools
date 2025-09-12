@@ -58,6 +58,7 @@ async function main() {
   await tryCommitProject("manager-ui");
   await tryCommitProject("vesp-ui");
   await tryCommitProject("admin-ui");
+  await tryCommitProject("inventory-ui");
   await tryCommitProject("worker-ui");
   await tryCommitProject("geo-ui");
 }
