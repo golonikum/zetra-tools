@@ -103,7 +103,10 @@ const processProjects = () => {
   const tableRows = ALL_DEPENDENCIES.map((name) => {
     const firstColumn = `<td>${name}</td>`;
     const otherColumns = ITEMS.map(
-      ({ dependencies }) => `<td>${dependencies[name] || ""}</td>`
+      ({ dependencies }) =>
+        `<td class="${
+          dependencies[name]?.includes("^") ? "highlighted" : ""
+        }">${dependencies[name] || ""}</td>`
     ).join("");
     const versions = new Set<string>();
     ITEMS.forEach((item) => {
