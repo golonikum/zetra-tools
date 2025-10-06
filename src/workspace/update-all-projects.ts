@@ -1,5 +1,6 @@
 import { Command } from "commander";
-import { execCommand } from "./execCommand";
+import { execCommand } from "../utils/execCommand";
+import { PROJECTS_COMMANDS_MAP, PROJECTS_SRC_MAP } from "../constants";
 
 const program = new Command();
 
@@ -28,17 +29,14 @@ async function updateProject(dir: string, buildCommand?: string) {
 }
 
 async function main() {
-  await updateProject("developer-kit", "yarn build:all");
-  await updateProject("core-api", "yarn build:webpack");
-  await updateProject("core-ui");
-  await updateProject("simulator-ui");
-  await updateProject("forces-ui");
-  await updateProject("geo-ui");
-  await updateProject("vesp-ui");
-  await updateProject("worker-ui");
-  await updateProject("admin-ui");
-  await updateProject("inventory-ui");
-  await updateProject("manager-ui");
+  const keys = Object.keys(
+    PROJECTS_SRC_MAP
+  ) as (keyof typeof PROJECTS_SRC_MAP)[];
+
+  for (let key of keys) {
+    const command = PROJECTS_COMMANDS_MAP[key];
+    await updateProject(key, command);
+  }
 }
 
 main();

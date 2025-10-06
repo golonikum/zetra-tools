@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import open from "open";
-import { execCommand } from "./execCommand";
+import { execCommand } from "../utils/execCommand";
+import { PROJECTS_SRC_MAP } from "../constants";
 
 const program = new Command();
 
@@ -10,14 +11,14 @@ program
     "-b, --branchName <item>",
     "имя ветки для фичи (например PROM-1234)"
   )
-  .requiredOption("-c, --commitMessage <item>", "Git commit message")
+  .requiredOption("-m, --commitMessage <item>", "Git commit message")
   .option("-p, --withPush", "запушить изменения на сервер");
 
 program.on("--help", () => {
   console.log("");
   console.log("Пример вызова:");
   console.log(
-    '  npx tsx src/workspace/commit-workspace -b PROM-2513 -c "PROM-2513: Замена поля в инцидентах"'
+    '  npx tsx src/workspace/commit-workspace -b PROM-2513 -m "Замена поля в инцидентах" -p'
   );
 });
 
@@ -33,7 +34,10 @@ async function tryCommitProject(dir: string) {
     !statusOutput.includes("nothing to commit")
   ) {
     await execCommand(dir, `git add .`);
-    await execCommand(dir, `git commit -m "${programOptions.commitMessage}"`);
+    await execCommand(
+      dir,
+      `git commit -m "${programOptions.branchName}: ${programOptions.commitMessage}"`
+    );
 
     if (programOptions.withPush) {
       const pushOutput = await execCommand(
@@ -50,17 +54,11 @@ async function tryCommitProject(dir: string) {
 }
 
 async function main() {
-  await tryCommitProject("developer-kit");
-  await tryCommitProject("core-api");
-  await tryCommitProject("core-ui");
-  await tryCommitProject("forces-ui");
-  await tryCommitProject("simulator-ui");
-  await tryCommitProject("manager-ui");
-  await tryCommitProject("vesp-ui");
-  await tryCommitProject("admin-ui");
-  await tryCommitProject("inventory-ui");
-  await tryCommitProject("worker-ui");
-  await tryCommitProject("geo-ui");
+  const keys = Object.keys(PROJECTS_SRC_MAP);
+
+  for (let key of keys) {
+    await tryCommitProject(key);
+  }
 }
 
 main();

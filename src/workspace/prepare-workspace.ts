@@ -1,5 +1,6 @@
 import { Command } from "commander";
-import { execCommand } from "./execCommand";
+import { execCommand } from "../utils/execCommand";
+import { PROJECTS_COMMANDS_MAP } from "../constants";
 
 const program = new Command();
 
@@ -40,8 +41,8 @@ async function prepareProject(dir: string, buildCommand?: string) {
 }
 
 async function main() {
-  await prepareProject("developer-kit", "yarn build:all");
-  await prepareProject("core-api", "yarn build:webpack");
+  await prepareProject("developer-kit", PROJECTS_COMMANDS_MAP["developer-kit"]);
+  await prepareProject("core-api", PROJECTS_COMMANDS_MAP["core-api"]);
   await prepareProject("core-ui");
   await prepareProject("simulator-ui");
   await prepareProject("forces-ui");
